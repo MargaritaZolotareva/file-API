@@ -52,7 +52,7 @@ class FilesControllerTest extends \PHPUnit_Framework_TestCase
     public function testGetFile()
     {
         $client = new Client();
-        $id = '2';
+        $id = '1';
         $response = $client->get('http://localhost:8001/api/v1/files/'.$id);
 
         $this->assertEquals(200, $response->getStatusCode());
@@ -61,7 +61,7 @@ class FilesControllerTest extends \PHPUnit_Framework_TestCase
     public function testGetFileMetadata()
     {
         $client = new Client();
-        $id = '2';
+        $id = '1';
         $response = $client->get('http://localhost:8001/api/v1/files/'.$id.'/metadata');
 
         $this->assertEquals(200, $response->getStatusCode());
@@ -87,7 +87,7 @@ class FilesControllerTest extends \PHPUnit_Framework_TestCase
     public function testChangeFile()
     {
         $client = new Client();
-        $id = '3';
+        $id = '1';
 
         $data = array(
             'title' => '...',
@@ -107,7 +107,7 @@ class FilesControllerTest extends \PHPUnit_Framework_TestCase
     public function testChangeFileOneField()
     {
         $client = new Client();
-        $id = '3';
+        $id = '1';
 
         $data = array(
             'mimeType' => '123'
