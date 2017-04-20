@@ -1,0 +1,11 @@
+USE silex;
+
+-- CREATE YOUR TABLES HERE
+CREATE TABLE files (
+    id INTEGER AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL,
+    description VARCHAR(10000),
+    mimeType VARCHAR(50) NOT NULL,
+    data VARBINARY(655365),
+    PRIMARY KEY (id)
+);
